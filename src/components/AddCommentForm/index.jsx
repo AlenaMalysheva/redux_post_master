@@ -2,6 +2,9 @@ import React from 'react'
 
 export default function AddCommentForm() {
   return (
-    <div>AddCommentForm</div>
+    <form>
+        <input type="text" placeholder='your comment' name='comment'/>
+        <button>Add comment</button>
+    </form>
   )
 }
