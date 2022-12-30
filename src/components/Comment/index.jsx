@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Post() {
+export default function Comment() {
   return (
-    <div>Post</div>
+    <div>Comment</div>
   )
 }
