@@ -24,7 +24,10 @@ export const posts_data = [
              that is initially hot can freeze faster than the other liquid 
              which is cold under similar conditions.`,
       like: false,
-      comments:[]
+      comments:[ {
+        id: 1,
+        comment: 'wow, interesting fact' 
+      }]
     },
     {
       id: 3,

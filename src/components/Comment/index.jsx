@@ -1,11 +1,11 @@
 import React from 'react'
 import s from './index.module.css'
 
-export default function Comment() {
+export default function Comment({id,comment}) {
 
   return (
-    <div>
-      Comment
+    <div className={s.comment_item}>
+      {comment}
     </div>
   )
 }

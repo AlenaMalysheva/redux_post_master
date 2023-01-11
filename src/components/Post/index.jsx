@@ -3,8 +3,9 @@ import s from './index.module.css'
 import { useDispatch } from 'react-redux';
 import { changeLike, deletePost } from '../../store/reducers/postsReducer';
 import { CloseOutlined } from '@ant-design/icons'
+import CommentsContainer from '../CommentsContainer';
 
-export default function Post({ id, title, text, like }) {
+export default function Post({ id, title, text, like , comments }) {
 
   const like_text = like ? 'Liked' : 'Like?';
   const like_style = [s.like_btn, like ? s.like_btn_active : ''].join(' ');
@@ -17,14 +18,15 @@ export default function Post({ id, title, text, like }) {
         className={s.cross_icon}
         onClick={() => dispatch(deletePost(id))} 
       />
-      <p>{ title }</p>
-      <p>{ text }</p>
+      <p className={s.post_title}>{ title }</p>
+      <p className={s.post_text}>{ text }</p>
       <p 
         className={like_style}
         onClick={() => dispatch(changeLike(id))}
       >
         { like_text }
       </p>
+      <CommentsContainer comments={comments} post_id={id}/>
   </div>
   )
 }

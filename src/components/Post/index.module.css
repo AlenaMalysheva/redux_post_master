@@ -4,10 +4,20 @@
     border-radius: 15px;
     margin: 10px;
     padding: 15px;
-    width: 350px;
+    width: 450px;
     min-height: 80px;
 
     position: relative;
+}
+
+.post_title {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.post_text {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .cross_icon {
