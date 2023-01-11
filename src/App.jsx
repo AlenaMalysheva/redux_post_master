@@ -1,10 +1,11 @@
-import './App.css';
-import PostsContainer from './components/PostsContainer';
+import AddPostForm from "./components/AddPostForm";
+import PostsContainer from "./components/PostsContainer";
 
 function App() {
   return (
     <div>
-     <PostsContainer/>
+      <AddPostForm />
+      <PostsContainer />
     </div>
   );
 }

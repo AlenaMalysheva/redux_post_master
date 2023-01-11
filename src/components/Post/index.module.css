@@ -1,4 +1,4 @@
-.post {
+.post_item {
     border: 3px solid rgb(12, 172, 231);
     background-color: rgb(224, 224, 68);
     border-radius: 15px;
@@ -15,3 +15,19 @@
     top: 10px;
     right: 10px;
 }
+
+.like_btn {
+    border: 1px solid black;
+    background-color: azure;
+    padding: 5px;
+    width: 50px;
+    cursor: pointer;
+    text-align: center;
+
+   
+}
+
+.like_btn_active {
+    background-color: red;
+    color: white;
+}  

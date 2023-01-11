@@ -1,30 +1,28 @@
-import React from 'react';
-import { addPost } from '../../store/reducers/postsReducer';
-import { useDispatch} from 'react-redux';
+import React from 'react'
 import s from './index.module.css'
+import { useDispatch } from 'react-redux';
+import { addPost } from '../../store/reducers/postsReducer';
 
 export default function AddPostForm() {
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
- 
-
-    const submit = (event) => {
-        event.preventDefault();
-        const { title, text } = event.target;
-        dispatch(addPost({
-            title: title.value,
-            text: text.value
-        }))
-        title.value = '';
-        text.value = '';
-    }
+  const submit = event => {
+    event.preventDefault();
+    const { title, text } = event.target;
+    dispatch(addPost({
+      title: title.value, 
+      text:text.value
+    }));
+    title.value = '';
+    text.value = '';
+  }
 
   return (
-    <form onSubmit={submit} className={s.post_form}>
-        <input type="text" placeholder='Title' name='title'/>
-        <input type="text" placeholder='Your text' name='text'/>
-        <button>Add post</button>
+    <form className={s.post_form} onSubmit={submit}>
+      <input type='text' name='title' placeholder='Your title' />
+      <input type='text' name='text' placeholder='Your text' />
+      <button>Add post</button>
     </form>
   )
 }
